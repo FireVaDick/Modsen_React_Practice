@@ -1,0 +1,60 @@
+@import '../../../../styles/variables.scss';
+
+.wrapper {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  background-color: $light-background;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 150px;
+  background-color: #ecf3ff;
+  border-radius: $border-radius;
+  transition: 0.3s;
+  cursor: pointer;  
+  .day {
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
+  .date {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: $base-color
+  }
+  svg {
+    width: 33px;
+    height: 33px;
+  }
+  .icon_id {
+    margin-bottom: 10px;
+  }
+  .temp_day {
+    margin-bottom: 4px;
+    font-size: 16px;
+  }
+  .temp_night {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: $base-color
+  }
+  .weather_info {
+    font-size: 14px;
+  }
+}
+
+
+
