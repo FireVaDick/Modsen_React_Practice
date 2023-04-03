@@ -19,10 +19,25 @@
     width: 100px;
     height: 100px;
   }
-  .this__temperature{
+  .this__temperature {
     font-size: 90px;
     font-weight: 500;
     color: $primary-color;
   }
+  .this__day_name {
+    font-size: 40px;    
+    color: $light-color;
+  }
 }
 
+.bottom__block {
+  .this__time,
+  .this__city {
+    font-size: 25px;
+    color: $base-color;
+  }
+  .this__city {
+    padding-top: 5px;
+  }
+  
+}
