@@ -11,7 +11,7 @@ export const ThisDay = (props: Props) => {
       <div className={s.top__block}>
         <div className={s.top__block_wrapper}>
           <div className={s.this__temperature}>
-            15
+            15°
           </div>
           <div className={s.this__day_day}>
             Сегодня
