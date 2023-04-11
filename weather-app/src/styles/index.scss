@@ -10,6 +10,7 @@
 body {
   position: relative;
   font-family: 'Ubuntu', sans-serif;
+  background: var(#{--body-background-default});
 }
 
 .container {

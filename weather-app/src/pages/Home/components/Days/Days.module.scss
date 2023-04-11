@@ -10,9 +10,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 20px;
   padding: 20px;
   width: 100%;
-  background-color: $light-background;
+  background-color: var(#{--components-background-default});
   box-shadow: $box-shadow;
   border-radius: $border-radius;
 }
@@ -23,13 +24,14 @@
   margin-top: 20px;
   padding: 15px;
   width: 150px;
-  background-color: #ecf3ff;
+  background-color: var(#{--card-background-default});;
   border-radius: $border-radius;
   transition: 0.3s;
   cursor: pointer;  
   .day {
     margin-bottom: 4px;
     font-size: 18px;
+    color: var(#{--text-color-default});
   }
   .date {
     margin-bottom: 10px;
@@ -46,6 +48,7 @@
   .temp_day {
     margin-bottom: 4px;
     font-size: 16px;
+    color: var(#{--text-color-default});
   }
   .temp_night {
     margin-bottom: 8px;
@@ -54,9 +57,11 @@
   }
   .weather_info {
     font-size: 14px;
+    color: var(#{--text-color-default});
   }
 
   &:hover {
+    //box-shadow: var(#{--card-shadow-default});
     box-shadow: 1px 2px 10px $base-color;
   }
 }
@@ -76,7 +81,8 @@
 .tab {
   margin-right: 15px;
   padding: 10px 20px;
-  background-color: $light-background;
+  background-color: var(#{--components-background-default});
+  color: var(#{--text-color-default});
   box-shadow: $box-shadow;
   border-radius: 5px;
   font-size: 18px;

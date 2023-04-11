@@ -1,29 +1,40 @@
-import React from 'react'
 import s from './Header.module.scss'
 import { GlobalSvgSelector } from '../../assets/icons/global/GlobalSvgSelector'
 import Select from 'react-select'
+import { useTheme } from '../../hooks/useTheme'
+import { Theme } from '../../context/ThemeContext'
 
 interface Props {
 }
 
 export const Header = (props: Props) => {
+  const theme = useTheme();
+
   const options = [
     { value: 'city-Mogilev', label: 'Могилёв' },
     { value: 'city-Minsk', label: 'Минск' },
     { value: 'city-Vitebsk', label: 'Витебск' }
   ]
   
-const colorStyles = {
-  control: (styles: any) => ({
-    ...styles,
-    backgroundColor: '#d6ebff',
-    width: '195px',
-    height: '40px',
-    border: 'none',
-    borderRadius: '10px',
-    zIndex: 100,
-  })
-}
+  const colorStyles = {
+    control: (styles: any) => ({
+      ...styles,
+      backgroundColor: theme.theme === Theme.DARK ? '#4f4f4f': '#d6ebff',
+      width: '195px',
+      height: '40px',
+      border: 'none',
+      borderRadius: '10px',
+      zIndex: 100,
+    }),
+    singleValue: (styles: any) => ({
+      ...styles,
+      color: theme.theme ===  Theme.DARK ? '#fff': '#000',
+    })
+  }
+
+  function changeTheme() {
+    theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT )
+  }
 
   return (
     <header className={s.header}>
@@ -41,7 +52,7 @@ const colorStyles = {
           defaultValue={options[0]}
           styles={colorStyles} 
           options={options} />
-        <div className={s.change_theme}>
+        <div className={s.change_theme} onClick={changeTheme}>
           <GlobalSvgSelector id='header-change_theme'/>
         </div>
       </div>  

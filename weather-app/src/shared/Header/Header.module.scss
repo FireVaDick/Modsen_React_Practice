@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .header {
   display: flex;
   align-items: center;
@@ -13,6 +15,7 @@
 
 .logo {
   margin-right: 15px;
+  cursor: pointer;
   svg {
     width: 60px;
     height: 60px;
@@ -23,12 +26,14 @@
   text-transform: uppercase;
   font-weight: 500;
   font-size: 24px;
+  color: $primary-color
 }
 
 .change_theme {
   margin-left: 15px;
+  cursor: pointer;
   svg {
     width: 25px;
     height: 25px;
-  }
+  }  
 }
