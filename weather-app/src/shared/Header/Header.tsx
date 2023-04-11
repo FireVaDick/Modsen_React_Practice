@@ -19,7 +19,7 @@ export const Header = (props: Props) => {
   const colorStyles = {
     control: (styles: any) => ({
       ...styles,
-      backgroundColor: theme.theme === Theme.DARK ? '#4f4f4f': '#d6ebff',
+      backgroundColor: theme.theme === Theme.DARK ? '#393b41': 'rgba(227, 242, 255, 0.8)',
       width: '195px',
       height: '40px',
       border: 'none',

@@ -1,6 +1,5 @@
 import { Theme } from "../context/ThemeContext";
 
-
 export function changeSccRootVariables(theme: Theme) {
   const root = document.querySelector(':root') as HTMLElement;
     
