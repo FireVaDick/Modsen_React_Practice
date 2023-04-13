@@ -1,30 +1,36 @@
 import React from 'react'
 import s from './ThisDay.module.scss'
 import { GlobalSvgSelector } from '../../../../assets/icons/global/GlobalSvgSelector'
+import { Weather } from '../../../../store/types/types'
 
 interface Props {
+  weather: Weather
 }
 
-export const ThisDay = (props: Props) => {
+export const ThisDay = ({weather}: Props) => {
+  var now = new Date();
+  var today = now.toLocaleTimeString();
+
   return (
     <div className={s.this__day}>
       <div className={s.top__block}>
         <div className={s.top__block_wrapper}>
           <div className={s.this__temperature}>
-            15°
+            {Math.round(weather.main.temp)}°
           </div>
           <div className={s.this__day_name}>
             Сегодня
           </div>
         </div>
-        <GlobalSvgSelector id='sun'/>
+        {/* <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}/> */}
+        <GlobalSvgSelector id={weather.weather[0].main}/>
       </div>
       <div className={s.bottom__block}>
         <div className={s.this__time}>
-          Время: <span>10:50</span>
+          Время: <span>{today}</span>
         </div>
         <div className={s.this__city}>
-          Город: <span>Могилёв</span>
+          Город: <span>{(weather.name)}</span>
         </div>
       </div>
     </div>

@@ -33,7 +33,16 @@
   margin-left: 15px;
   cursor: pointer;
   svg {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }  
+}
+
+input {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  color: #fff;
+  background-color: $primary-color;
 }
