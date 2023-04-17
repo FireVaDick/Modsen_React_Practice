@@ -1,19 +1,21 @@
 import React from 'react'
 import s from './Days.module.scss'
 import { Day } from './Days'
-import { GlobalSvgSelector } from '../../../../assets/icons/global/GlobalSvgSelector'
-import { Weather } from '../../../../store/types/types'
+import { GlobalSvgSelector } from './../../assets/icons/global/GlobalSvgSelector'
+import { Weather } from '../../Interfaces/Interfaces'
 
 interface Props {
   weather: Weather,
-  someday: Day
+  someday: Day,
+  popupActive: boolean,
+  setPopupActive: any
 }
 
-export const Card = ({weather, someday}: Props) => {
+export const Card: React.FC<Props> = ({weather, someday, popupActive, setPopupActive}: Props) => {
   const {day, date, icon_id, temp_max, temp_min, weather_info} = someday;
   
   return (
-    <div className={s.card}>
+    <div className={s.card} onClick={() => setPopupActive(true)}>
       <div className={s.day}>
         {day}
       </div>

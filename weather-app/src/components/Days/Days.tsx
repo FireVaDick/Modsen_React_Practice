@@ -2,10 +2,12 @@ import React from 'react'
 import s from './Days.module.scss'
 import { Card } from './Card';
 import { Tabs } from './Tabs';
-import { Weather } from '../../../../store/types/types';
+import { Weather } from '../../Interfaces/Interfaces';
 
 interface Props {
   weather: Weather
+  popupActive: boolean,
+  setPopupActive: any
 }
 
 export interface Day {
@@ -28,7 +30,7 @@ function getNextDate(date: any, next: number) {
   return dateCopy.toLocaleDateString('ru');
 }
 
-export const Days = ({weather}: Props) => {
+export const Days: React.FC<Props> = ({weather, popupActive, setPopupActive}: Props) => {
   var now = new Date();
 
   const days: Day[] = [
@@ -92,10 +94,10 @@ export const Days = ({weather}: Props) => {
   
   return (
     <>
-    <Tabs/>
+    {/* <Tabs/> */}
     <div className={s.days}>
       {days.map((someday: Day) => (
-        <Card weather={weather} someday={someday} key={someday.day}/>
+        <Card weather={weather} someday={someday} key={someday.day} popupActive={popupActive} setPopupActive={setPopupActive}/>
       ))}
     </div>
     </>

@@ -1,14 +1,15 @@
 import React from 'react'
 import s from './Popup.module.scss'
-import { GlobalSvgSelector } from '../../assets/icons/global/GlobalSvgSelector'
-import Select from 'react-select'
-import { Item } from '../../pages/Home/components/ThisDayInfo/ThisDayInfo'
-import { ThisDayItem } from '../../pages/Home/components/ThisDayInfo/ThisDayItem'
+import { GlobalSvgSelector } from './../../assets/icons/global/GlobalSvgSelector'
+import { Item } from './../ThisDayInfo/ThisDayInfo'
+import { ThisDayItem } from './../ThisDayInfo/ThisDayItem'
 
 interface Props {
+  popupActive: boolean,
+  setPopupActive: any
 }
 
-export const Popup = (props: Props) => {
+export const Popup = ({popupActive, setPopupActive}: Props) => {
   const items = [
     {
       icon_id: 'temperature',
@@ -32,10 +33,10 @@ export const Popup = (props: Props) => {
     },
   ];
 
+  console.log("active: " + popupActive)
+
   return (
-    <>
-    <div className={s.blur}></div>
-    <div className={s.popup}>
+    <div className={popupActive ? s.popupActive : s.popup}>
       <div className={s.day}>
         <div className={s.day__temperature}>
           15°
@@ -59,10 +60,9 @@ export const Popup = (props: Props) => {
           <ThisDayItem key={item.icon_id} item={item}/>
         ))}
       </div>
-      <div className={s.close}>
+      <div className={s.close} onClick={() => setPopupActive(false)}>
         <GlobalSvgSelector id='close'/>
       </div>
     </div>
-    </>
   )
 }

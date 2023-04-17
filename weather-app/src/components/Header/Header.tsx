@@ -1,12 +1,10 @@
 import s from './Header.module.scss'
-import { GlobalSvgSelector } from '../../assets/icons/global/GlobalSvgSelector'
-import Select from 'react-select'
-import { useTheme } from '../../hooks/useTheme'
-import { Theme } from '../../context/ThemeContext'
+import { GlobalSvgSelector } from './../../assets/icons/global/GlobalSvgSelector'
+import { useTheme } from './../../hooks/useTheme'
+import { Theme } from './../../context/ThemeContext'
 import { useEffect, useState } from 'react'
-import axios from 'axios'
-import { fetchCurrentWeather } from '../../store/thunks/fetchCurrentWeather'
-import { useCustomDispatch } from '../../hooks/store'
+import { fetchCurrentWeather } from './../../store/thunks/fetchCurrentWeather'
+import { useCustomDispatch } from './../../hooks/store'
 
 interface Props {
 }

@@ -1,4 +1,4 @@
-@import '../../../../styles/variables.scss';
+@import '../../styles/variables.scss';
 
 .wrapper {
   display: flex;
@@ -39,8 +39,8 @@
     color: $base-color
   }
   img, svg {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
   }
   .icon_id {
     margin-bottom: 10px;

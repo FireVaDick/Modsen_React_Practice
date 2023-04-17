@@ -1,8 +1,8 @@
 import React from 'react'
 import s from './ThisDayInfo.module.scss'
-import clouds from '../../../../assets/images/Clouds.png'
+import clouds from './../../assets/images/Clouds.png'
 import { ThisDayItem } from './ThisDayItem'
-import { Weather } from '../../../../store/types/types'
+import { Weather } from '../../Interfaces/Interfaces'
 
 interface Props {
   weather: Weather

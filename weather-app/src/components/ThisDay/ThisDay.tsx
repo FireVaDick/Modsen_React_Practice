@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './ThisDay.module.scss'
-import { GlobalSvgSelector } from '../../../../assets/icons/global/GlobalSvgSelector'
-import { Weather } from '../../../../store/types/types'
+import { GlobalSvgSelector } from './../../assets/icons/global/GlobalSvgSelector'
+import { Weather } from '../../Interfaces/Interfaces'
 
 interface Props {
   weather: Weather
@@ -9,7 +9,6 @@ interface Props {
 
 export const ThisDay = ({weather}: Props) => {
   var now = new Date();
-  var today = now.toLocaleTimeString();
 
   return (
     <div className={s.this__day}>
@@ -27,10 +26,10 @@ export const ThisDay = ({weather}: Props) => {
       </div>
       <div className={s.bottom__block}>
         <div className={s.this__time}>
-          Время: <span>{today}</span>
+          Время: <span>{now.getHours()}:{now.getMinutes()}</span>
         </div>
         <div className={s.this__city}>
-          Город: <span>{(weather.name)}</span>
+          Город: <span>{weather.name}</span>
         </div>
       </div>
     </div>
