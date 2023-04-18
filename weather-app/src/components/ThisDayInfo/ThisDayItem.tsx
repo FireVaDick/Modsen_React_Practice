@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './ThisDayInfo.module.scss'
-import { Item } from './ThisDayInfo';
 import { IndicatorSvgSelector } from './../../assets/icons/indicators/IndicatorSvgSelector';
+import { Item } from '../../Interfaces/Interfaces';
 
 interface Props {
   item: Item;

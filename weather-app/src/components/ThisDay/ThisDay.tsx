@@ -15,14 +15,14 @@ export const ThisDay = ({weather}: Props) => {
       <div className={s.top__block}>
         <div className={s.top__block_wrapper}>
           <div className={s.this__temperature}>
-            {Math.round(weather.main.temp)}°
+            {Math.round(weather.temp)}°
           </div>
           <div className={s.this__day_name}>
             Сегодня
           </div>
         </div>
         {/* <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}/> */}
-        <GlobalSvgSelector id={weather.weather[0].main}/>
+        <GlobalSvgSelector id={weather.details}/>
       </div>
       <div className={s.bottom__block}>
         <div className={s.this__time}>

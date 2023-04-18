@@ -55,7 +55,13 @@
     font-size: 14px;
     color: $base-color
   }
-  .weather_info {
+  .precipitation_prob {
+    font-size: 14px;
+    color: var(#{--text-color-default});
+    margin-bottom: 6px;
+  }
+
+  .windspeed_max {
     font-size: 14px;
     color: var(#{--text-color-default});
   }

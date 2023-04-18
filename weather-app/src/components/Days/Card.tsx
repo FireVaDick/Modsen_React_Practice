@@ -1,8 +1,7 @@
 import React from 'react'
 import s from './Days.module.scss'
-import { Day } from './Days'
 import { GlobalSvgSelector } from './../../assets/icons/global/GlobalSvgSelector'
-import { Weather } from '../../Interfaces/Interfaces'
+import { Day, Weather } from '../../Interfaces/Interfaces'
 
 interface Props {
   weather: Weather,
@@ -12,7 +11,7 @@ interface Props {
 }
 
 export const Card: React.FC<Props> = ({weather, someday, popupActive, setPopupActive}: Props) => {
-  const {day, date, icon_id, temp_max, temp_min, weather_info} = someday;
+  const {day, date, icon_id, temp_max, temp_min, precipitation_prob, windspeed_max} = someday;
   
   return (
     <div className={s.card} onClick={() => setPopupActive(true)}>
@@ -39,8 +38,11 @@ export const Card: React.FC<Props> = ({weather, someday, popupActive, setPopupAc
         </div>
       </div>    
 
-      <div className={s.weather_info}>
-        {weather_info}
+      <div className={s.precipitation_prob}>
+        Вероятность осадков: {precipitation_prob}
+      </div>
+      <div className={s.windspeed_max}>
+        Макс скорость ветра: {windspeed_max}
       </div>
     </div>
   )

@@ -1,8 +1,8 @@
 import React from 'react'
 import s from './Popup.module.scss'
 import { GlobalSvgSelector } from './../../assets/icons/global/GlobalSvgSelector'
-import { Item } from './../ThisDayInfo/ThisDayInfo'
 import { ThisDayItem } from './../ThisDayInfo/ThisDayItem'
+import { Item } from '../../Interfaces/Interfaces'
 
 interface Props {
   popupActive: boolean,
