@@ -6,20 +6,9 @@ import { Days } from '../../components/Days/Days'
 import getFormattedWeatherData from '../../services/WeatherService'
 
 
-export const Home = ({city, popupActive, setPopupActive}) => {
-  const [weather, setWeather] = useState(null);
-  
-  useEffect(() => {
-    const fetchWeather = async () => {
-      await getFormattedWeatherData({...city}).then((data) => {
-          setWeather(data);
-        });
-      console.log("city with weather");
-      console.log(city);
-    }
-    
-    fetchWeather();
-  }, [city])
+export const Home = ({city, weather, setWeather, popupActive, setPopupActive}) => {
+
+
 
   if (weather != null) {
     // console.log("weather " + weather)
