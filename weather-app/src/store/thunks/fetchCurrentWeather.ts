@@ -8,14 +8,20 @@ export const fetchCurrentWeather =
     try {
       dispatch(currentWeatherSlice.actions.fetchCurrentWeather)
 
-      const res = await WeatherService.getCurrentWeather(city);      
-      console.log(res)
+      const currentWeather = await WeatherService.getCurrentWeather(city);      
+      console.log(currentWeather)
 
-      if (res.status === 200) {
-        dispatch(currentWeatherSlice.actions.fetchCurrentWeatherSuccess(res))    
+      const lat = currentWeather.data.coord.lat;
+      const lon = currentWeather.data.coord.lon;
+
+      const dailyHourlyWeather = await WeatherService.getCurrentWeather(city); 
+      console.log(dailyHourlyWeather)
+
+      if (currentWeather.status === 200) {
+        dispatch(currentWeatherSlice.actions.fetchCurrentWeatherSuccess(currentWeather))    
       }
       else {
-        dispatch(currentWeatherSlice.actions.fetchCurrentWeatherError(res))    
+        dispatch(currentWeatherSlice.actions.fetchCurrentWeatherError(currentWeather))    
       }
     }
     catch (error) {

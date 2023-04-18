@@ -16,6 +16,10 @@ type WeatherResponse = {
 
 const initialState: CurrentWeather = {
   weather: {
+    coord: {
+      lat: 0,
+      lon: 0,
+    },
     main: {
       temp: 0,
       feels_like: 0,
