@@ -9,10 +9,14 @@ interface Props {
 }
 
 export const Hour: React.FC<Props> = ({weather, somehour}: Props) => {
-  const {time, temp, humidity, speed} = somehour;
+  const {time, icon_id, temp, humidity, speed} = somehour;
   
   return (
     <div className={s.card}>
+      <div className={s.icon_id}>
+        {/* <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}/> */}
+        <GlobalSvgSelector id={icon_id}/>    
+      </div>
       <div className={s.time}>
         {time}
       </div>
@@ -23,8 +27,9 @@ export const Hour: React.FC<Props> = ({weather, somehour}: Props) => {
         Влажность: {humidity}%
       </div>
       <div className={s.speed}>
-        Скорость ветра: {speed} м/c
+        Ветер: {speed} м/c
       </div>
+
     </div>
   )
 }

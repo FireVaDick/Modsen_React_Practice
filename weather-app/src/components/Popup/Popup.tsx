@@ -58,6 +58,7 @@ export const Popup = ({weather, popupActive, setPopupActive}: Props) => {
     for (var i = 0; i < 24; i++)
       hours.push({
         time: `${weather.hourly.time[i]}`,
+        icon_id: `${weather.hourly.weathercode[i]}`,
         temp: `${weather.hourly.temperature_2m[i]}`,
         humidity: `${weather.hourly.relativehumidity_2m[i]}`,
         speed: `${weather.hourly.windspeed_10m[i]}`,

@@ -64,7 +64,7 @@ const getFormattedWeatherData = async (searchParams) => {
     {
       latitude, 
       longitude, 
-      hourly: "temperature_2m,relativehumidity_2m,windspeed_10m",
+      hourly: "temperature_2m,relativehumidity_2m,windspeed_10m,weathercode",
       daily: "weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max,windspeed_10m_max",
       windspeed_unit: "ms",
       timezone: "Europe/Moscow"

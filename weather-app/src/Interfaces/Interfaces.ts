@@ -29,6 +29,7 @@ export type IWeather = {
     temperature_2m: [number, number, number, number, number, number, number],
     relativehumidity_2m: [number, number, number, number, number, number, number],
     windspeed_10m: [number, number, number, number, number, number, number],
+    weathercode: [number, number, number, number, number, number, number],
   }
 };
 
@@ -44,6 +45,7 @@ export interface IDay {
 
 export interface IHour {
   time: string, 
+  icon_id: string,
   temp: string, 
   humidity: string, 
   speed: string
