@@ -17,19 +17,19 @@ export type IWeather = {
   speed: number, 
   deg: number,
   daily: {
-    time: [string, string, string, string, string, string, string],
-    weathercode: [number, number, number, number, number, number, number],
-    temperature_2m_max: [number, number, number, number, number, number, number],
-    temperature_2m_min: [number, number, number, number, number, number, number],
-    precipitation_probability_max: [number, number, number, number, number, number, number],
-    windspeed_10m_max: [number, number, number, number, number, number, number]
+    time: [string],
+    weathercode: [number],
+    temperature_2m_max: [number],
+    temperature_2m_min: [number],
+    precipitation_probability_max: [number],
+    windspeed_10m_max: [number]
   }
   hourly: {
-    time: [string, string, string, string, string, string, string],
-    temperature_2m: [number, number, number, number, number, number, number],
-    relativehumidity_2m: [number, number, number, number, number, number, number],
-    windspeed_10m: [number, number, number, number, number, number, number],
-    weathercode: [number, number, number, number, number, number, number],
+    time: [string],
+    temperature_2m: [number],
+    relativehumidity_2m: [number],
+    windspeed_10m: [number],
+    weathercode: [number],
   }
 };
 

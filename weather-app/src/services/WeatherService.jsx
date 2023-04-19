@@ -12,6 +12,14 @@ const getCurrentWeatherData = (infoType, searchParams) => {
 
   console.log("url current " + url)
 
+  // try{
+  //   let promise = fetch(url).then(function(response) {
+  //     console.log("response.status " + response.status)
+  //     if (response.status === 200) return response.json();
+  //   });
+  // }
+  // catch{  }
+
   return fetch(url)
     .then((res) => res.json())
 };
@@ -77,7 +85,6 @@ const getFormattedWeatherData = async (searchParams) => {
 // const formatToLocalTime = (secs, zone, format = 
 //   "cccc, dd LLL yyyy' | Local time: ' hh:mm a") => 
 //   DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
-
 
 
 export default getFormattedWeatherData;

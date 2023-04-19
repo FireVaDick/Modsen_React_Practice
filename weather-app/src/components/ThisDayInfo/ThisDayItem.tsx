@@ -1,10 +1,10 @@
 import React from 'react'
 import s from './ThisDayInfo.module.scss'
 import { IndicatorSvgSelector } from './../../assets/icons/indicators/IndicatorSvgSelector';
-import { Item } from '../../Interfaces/Interfaces';
+import { IItem } from '../../Interfaces/Interfaces';
 
 interface Props {
-  item: Item;
+  item: IItem;
 }
 
 export const ThisDayItem = ({item}: Props) => {

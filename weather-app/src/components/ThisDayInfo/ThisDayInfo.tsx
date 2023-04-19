@@ -2,10 +2,10 @@ import React from 'react'
 import s from './ThisDayInfo.module.scss'
 import clouds from './../../assets/images/Clouds.png'
 import { ThisDayItem } from './ThisDayItem'
-import { Item, Weather } from '../../Interfaces/Interfaces'
+import { IItem, IWeather } from '../../Interfaces/Interfaces'
 
 interface Props {
-  weather: Weather
+  weather: IWeather
 }
 
 export const ThisDayInfo = ({weather}: Props) => {
@@ -35,7 +35,7 @@ export const ThisDayInfo = ({weather}: Props) => {
   return (
     <div className={s.this__day_info}>
       <div className={s.this__day_info_items}>
-        {items.map((item: Item) => (
+        {items.map((item: IItem) => (
           <ThisDayItem key={item.icon_id} item={item}/>
         ))}
       </div>

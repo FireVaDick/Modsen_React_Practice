@@ -8,8 +8,6 @@ import getFormattedWeatherData from '../../services/WeatherService'
 
 export const Home = ({city, weather, setWeather, popupActive, setPopupActive}) => {
 
-
-
   if (weather != null) {
     // console.log("weather " + weather)
     // console.log("weather.lat " + weather.lat)
